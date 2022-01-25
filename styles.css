@@ -1,0 +1,205 @@
+/* Style Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+
+/*Style */
+body{
+    font-size: 16px;
+    background-image: url('./images/bg-intro-mobile.png');
+    background-color: var(--red);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.whale-section{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top-section__header{
+    margin: 4rem 3.5rem 1.5rem 3.5rem;
+}
+
+#header-text{
+    font-weight: 700;
+}
+
+.top-section__about{
+    margin: 0 1rem 3rem 1rem;
+}
+
+#about-text{
+    font-family: sans-serif;
+    line-height: 1.6rem;
+}
+
+.subscription__offer{
+    background-color: var(--blue);
+    width: 18rem;
+    margin: 0 0 1rem 2.8rem;
+    height: 5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0px 7px 0px hsl(249, 10%, 26%, 0.2);
+}
+
+.weigth-600{
+    font-weight: 600;
+}
+
+.subscription__form{
+    margin: 2rem 0 1rem 2.8rem;
+    width: 18rem;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+input{
+    width: 15rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid var(--grayish-blue);
+    outline: none;
+    padding-left: 1rem;
+}
+
+input::placeholder{
+    font-weight: 600;
+}
+
+.missing input{
+    border: 2px solid var(--red);
+}
+
+.missing input::placeholder{
+    color: var(--red);
+}
+
+.filling__box{
+    margin-bottom: 0.3rem;
+}
+
+.filling__box img{
+    position: absolute;
+    left: 17rem;
+    padding-top: 0.7rem;
+    visibility: hidden;
+}
+
+.filling__error{
+    color: var(--red);
+    font-weight: 400;
+    text-align: right;
+    margin-top: 0.3rem;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.filling .missing img{
+    visibility: visible;
+}
+
+.filling .missing p{
+    visibility: visible;
+}
+
+.filling__submit button{
+    background-color: var(--green);
+    width: 15rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border-bottom: solid 4px hsl(154, 59%, 44%);
+    cursor: pointer;
+}
+
+.filling__terms-and-services{
+    color: lightgray;
+    margin-top: 0.6rem;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.color-red{
+    color: red;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 1400px) {
+    body{
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content__about-section{
+        align-items: center;
+        position: relative;
+        margin: auto 10rem;
+        width: 25rem;
+        text-align: left;
+    }
+
+    .top-section__header{
+        margin: 4rem 0 1rem 1rem;
+    }
+
+    .content__subscription{
+        width: 30rem;
+        margin: 5rem 0;
+    }
+
+    .subscription__offer{
+        width: 30rem;
+        height: 3rem;
+        padding: 0;
+        padding-top: 1rem;
+    }
+
+    .subscription__form{
+        width: 30rem;
+    }
+
+    input{
+        width: 27rem;
+    }
+
+    .filling__box img{
+        left: 74rem;
+    }
+
+    .filling__submit button{
+        width: 27rem;
+    }
+}
